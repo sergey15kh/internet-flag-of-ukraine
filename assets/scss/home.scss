@@ -25,12 +25,22 @@
       justify-content: center;
       ul {
          display: flex;
+         @media (max-width: 1279px) {
+            flex-direction: column;
+         }
          li {
             width: 380px;
             height: 70px;
             margin-right: 20px;
             background-color: #3F48CC;
             text-align: center;
+            @media (max-width: 767px) {
+               width: 280px;
+               height: 40px;
+            }
+            @media (max-width: 1279px) {
+               margin-bottom: 20px;
+            }
             a {
                color: #FFF200;
                text-transform: uppercase;
@@ -38,6 +48,10 @@
                font-size: 2rem;
                line-height: 70px;
                cursor: pointer;
+               @media (max-width: 767px) {
+                  line-height: 40px;
+                  font-size: 1rem;
+               }
             }
 
             &:last-child {
@@ -64,6 +78,7 @@
       text-transform: uppercase;
       font-weight: bold;
       font-size: 4rem;
+      @media (max-width: 767px) {font-size: 3rem;}
    }
 }
 
