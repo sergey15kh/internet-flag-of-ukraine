@@ -3,6 +3,7 @@
       display: flex;
       justify-content: center;
       margin-top: 5px;
+      margin-bottom: 10px;
       li {
          width: 300px;
          height: 40px;
@@ -23,35 +24,74 @@
          }
       }
    }
+
    // .flag__top
    &__top {
       background-color: #3F48CC;
       width: 100%;
-      height: 50vh;
-      display: flex;
-      align-content: center;
-      text-align: center;
+      height: 47vh;
+
    }
+
    // .flag__bottom
    &__bottom {
       background-color: #FFF200;
       width: 100%;
-      height: 50vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+      height: 47vh;
    }
 }
 
-table{
-   border-collapse:collapse;
-   border-spacing:0;
+table {
+   width: 100%;
+   border-collapse: collapse;
+   border-spacing: 0
+}
+
+table,
+td,
+th {
+   border: 1px solid #000;
+}
+
+.flag__top {
+   td,
+   th {
+      width: 10px;
+      height: 10px;
+      background-color: #1F4E78;
    }
-   table, td, th{
-   border: 1px solid #595959;
+   .td-active-top {
+      background-color: #3F48CC;
    }
-   td, th{
-   padding: 3px;
-   width: 10px;
-   height: 10px;
+}
+
+.flag__bottom {
+   td,
+   th {
+      width: 10px;
+      height: 10px;
+      background-color: #FFD966;
+      position: relative;
    }
+   .td-active-bottom {
+      background-color: #FFF200;
+   }
+}
+
+td .tooltiptext {
+   visibility: hidden;
+   width: 120px;
+   background-color: black;
+   color: #fff;
+   text-align: center;
+   border-radius: 6px;
+   padding: 5px 0;
+
+   /* Position the tooltip */
+   position: absolute;
+   z-index: 1;
+}
+
+td:hover .tooltiptext {
+   visibility: visible;
+}
