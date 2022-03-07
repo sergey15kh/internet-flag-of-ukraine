@@ -91,7 +91,10 @@ th {
 
 td {
    position: relative;
+
 }
+
+
 
 .flag__bottom {
    td,
@@ -115,6 +118,12 @@ td {
 .flag__bottom {
    td .tooltiptext {
       bottom: 10px;
+   }
+}
+
+td:nth-child(n+164) {
+   .tooltiptext {
+      left: -260px;
    }
 }
 
