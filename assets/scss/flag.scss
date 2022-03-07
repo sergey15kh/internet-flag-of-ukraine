@@ -27,17 +27,20 @@
 
    // .flag__top
    &__top {
-      background-color: #3F48CC;
+      background-color: #1F4E78;
       width: 100%;
-      height: 40vh;
-
+      // height: 40.3vh;
+      min-height: 100%;
+      z-index: -1;
    }
 
    // .flag__bottom
    &__bottom {
-      background-color: #FFF200;
+      background-color: #FFD966;
       width: 100%;
-      height: 40vh;
+      // height: 40.3vh;
+      min-height: 100%;
+      z-index: -1;
    }
    &__search {
       margin: 30px 0 0 30px;
@@ -65,66 +68,22 @@
    outline-offset: 0px;
 }
 
-table {
-   width: 100%;
-   border-collapse: collapse;
-   border-spacing: 0
-}
-
-table,
-td,
-th {
-   border: 1px solid #000;
-}
-
-.flag__top {
-   td,
-   th {
-      width: 10px;
-      height: 10px;
-      background-color: #1F4E78;
-   }
-   .td-active-top {
-      background-color: #3F48CC;
-   }
-}
-
-td {
-   position: relative;
-
-}
-
-
-
-.flag__bottom {
-   td,
-   th {
-      width: 10px;
-      height: 10px;
-      background-color: #FFD966;
+.tr {
+   display: flex;
+   flex-wrap: wrap;
+   .td {
+      width: 15px;
+      height: 15px;
+      border-right: 1px solid #333;
+      border-bottom: 1px solid #333;
+      cursor: pointer;
       position: relative;
    }
-   .td-active-bottom {
-      background-color: #FFF200;
-   }
 }
 
-.flag__top {
-   td .tooltiptext {
-      top: 10px;
-   }
-}
-
-.flag__bottom {
-   td .tooltiptext {
-      bottom: 10px;
-   }
-}
-
-td:nth-child(n+164) {
-   .tooltiptext {
-      left: -260px;
-   }
+.block-flag {
+   position: relative;
+   overflow: hidden;
 }
 
 .tooltiptext{
@@ -135,7 +94,7 @@ td:nth-child(n+164) {
    border-radius: 6px;
    padding: 5px 20px 10px 20px;
    border: 3px solid #000;
-   left: 10px;
+   left: 20px;
    position: absolute;
    z-index: 1;
    transition: 200ms ease-in-out;
@@ -158,6 +117,20 @@ td:nth-child(n+164) {
    }
 }
 
-td:hover .tooltiptext {
+.td:hover .tooltiptext {
    visibility: visible;
+}
+
+.td:nth-child(n+120) {
+   .tooltiptext {
+      left: -264px;
+   }
+}
+
+.td-active-top {
+   background-color: #3F48CC;
+}
+
+.td-active-bottom {
+   background-color: #FFF200;
 }
