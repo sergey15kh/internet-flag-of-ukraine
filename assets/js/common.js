@@ -1,13 +1,13 @@
 //=================
 //Menu
-$(function () {
-    $('.burger-menu').click(function (event) {
-        $('.menu').toggleClass('active')
-    }),
-    $('.submenu__link, .menu__link').click(function (event) {
-        $('.menu').removeClass('active')
-    });
-})
+// $(function () {
+//     $('.td').click(function (event) {
+//         $('.tooltiptext').toggleClass('active')
+//     }),
+//     $('.submenu__link, .menu__link').click(function (event) {
+//         $('.menu').removeClass('active')
+//     });
+// })
 //=================
 //Anchor
 $(document).ready(function(){

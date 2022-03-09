@@ -68,7 +68,7 @@
       z-index: -1;
    }
    &__search {
-      margin: 30px 0 30px 30px;
+      margin: 30px 0 20px 30px;
       form {
          @media (max-width: 767px) {
             display: flex;
@@ -108,8 +108,8 @@
 }
 
 .tr {
-   display: flex;
-   flex-wrap: wrap;
+   display: inline-flex;
+   // flex-wrap: nowrap;
    .td {
       width: 15px;
       height: 15px;
@@ -123,6 +123,7 @@
 .block-flag {
    position: relative;
    overflow: hidden;
+   overflow-x: scroll;
 }
 
 .tooltiptext{
